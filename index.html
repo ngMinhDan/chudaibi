@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A Di Đà Phật</title>
-  <meta name="description" content="Bản văn Chú Đại Bi với bố cục dễ đọc trên điện thoại và máy tính." />
+  <meta name="description" content="Trang chủ với các bài kinh Phật và công cụ hỗ trợ tu tập." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -64,6 +64,19 @@
       background: var(--bg);
       color: var(--fg);
     }
+
+    .card-hover {
+      transition: all 0.2s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.15);
+    }
+
+    :root[data-theme="dark"] .card-hover:hover {
+      box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
@@ -72,7 +85,9 @@
           style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3 md:py-4 min-h-[60px] md:min-h-[70px]">
-        <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">A Di Đà Phật</h1>
+        <a href="index.html" class="no-underline">
+  <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">A Di Đà Phật</h1>
+</a>
         <nav class="flex gap-1 sm:gap-2 md:gap-2 items-center flex-wrap" aria-label="Công cụ hiển thị">
           <button id="decrease-font" 
                   class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
@@ -93,52 +108,207 @@
 
   <main class="py-4 md:py-8 lg:py-14" role="main">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      <article class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10" 
+      
+      <!-- Welcome Section -->
+      <section class="mb-8 md:mb-12">
+        <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10 text-center" 
+             style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style="color: var(--accent);">
+            Chào mừng đến với trang A Di Đà Phật
+          </h2>
+          <p class="text-base md:text-lg mb-6 md:mb-8" style="color: var(--muted);">
+            Nơi chia sẻ các bài kinh, chú và công cụ hỗ trợ tu tập hàng ngày - vĩnh viễn miễn phí, không quảng cáo
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            <a href="index.html" 
+               class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white transition-colors min-h-[44px] w-full sm:w-auto"
+               style="background: var(--accent);">
+              Đọc Chú Đại Bi
+            </a>
+            <a href="#sutras" 
+               class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium border transition-colors min-h-[44px] w-full sm:w-auto"
+               style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);">
+              Xem thêm kinh sách
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sutras Grid -->
+      <section id="sutras" class="mb-8 md:mb-12">
+        <h3 class="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-center" style="color: var(--fg);">
+          Các bài kinh và chú
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          
+          <!-- Chu Dai Bi Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
                style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
-        
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-8 m-0" 
-            style="color: var(--accent);">Chú Đại Bi</h1>
-        
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Chú Đại Bi</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Bản văn đầy đủ của Chú Đại Bi với bố cục dễ đọc trên mọi thiết bị
+            </p>
+            <a href="chudaibi.html" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--accent);">
+              Đọc ngay →
+            </a>
+          </div>
 
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Thiên thủ thiên nhãn, vô ngại Đại-bi tâm đà-la-ni.</p>
+          <!-- Kinh Phat Dan Sanh Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Giải thích chú Đại Bi</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Bản văn đầy đủ của Giải thích chú Đại Bi với bố cục dễ đọc trên mọi thiết bị
+            </p>
+            <a href="giaithichchudaibi.html" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--accent);">
+              Đọc ngay →
+            </a>
+          </div>
 
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na đa ra dạ da.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da bà lô yết đế, thước bát ra da, bồ đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
-          Án tát bàn ra phạt duệ, số đát na đát tỏa.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô tất kiết lật đỏa, y mông a rị da, bà lô kiết đế, thất Phật ra lăng đà bà.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế, tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
-          già, ma phạt đạt đậu, đát điệt tha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
-          đà dựng,</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">cu lô cu lô, kiết mông độ lô độ lô, phạt xà da đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
-          da, dá ra dá ra.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
-          da, hô lô hô lô,</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
-          rị dạ na ra cẩn trì địa rị sắc ni na, ba dạ ma na, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
-          ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na, đa ra dạ da.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da, bà lô yết đế, thước bàng ra dạ, ta bà ha.</p>
+          <!-- Kinh Tam Bao Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Tam Bảo</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Kinh về Phật, Pháp, Tăng - ba báu vật thiêng liêng của Phật giáo
+            </p>
+            <a href="#" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--muted);">
+              Sắp ra mắt →
+            </a>
+          </div>
 
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+          <!-- Chu Luc Tu Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Chú Lục Tự</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Om Mani Padme Hum - chú ngôn sáu chữ của Đức Quan Thế Âm
+            </p>
+            <a href="#" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--muted);">
+              Sắp ra mắt →
+            </a>
+          </div>
 
-      </article>
+          <!-- Kinh Tam Quy Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Tam Quy</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Lời nguyện quy y Tam Bảo, bước đầu vào cửa Phật
+            </p>
+            <a href="#" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--muted);">
+              Sắp ra mắt →
+            </a>
+          </div>
+
+          <!-- Kinh Cau Sieu Card -->
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Cầu Siêu</h4>
+            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+              Các bài kinh dành cho việc cầu siêu, hồi hướng công đức
+            </p>
+            <a href="#" 
+               class="inline-flex items-center text-sm font-medium transition-colors"
+               style="color: var(--muted);">
+              Sắp ra mắt →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="mb-8 md:mb-12">
+        <h3 class="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-center" style="color: var(--fg);">
+          Tính năng hỗ trợ
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                   style="background: var(--accent);">
+                📱
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--fg);">Responsive Design</h4>
+                <p class="text-sm md:text-base" style="color: var(--muted);">
+                  Tối ưu cho mọi thiết bị từ điện thoại đến máy tính bảng và desktop
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                   style="background: var(--accent);">
+                🌙
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--fg);">Chế độ tối</h4>
+                <p class="text-sm md:text-base" style="color: var(--muted);">
+                  Chuyển đổi dễ dàng giữa chế độ sáng và tối để bảo vệ mắt
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                   style="background: var(--accent);">
+                🔤
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--fg);">Điều chỉnh cỡ chữ</h4>
+                <p class="text-sm md:text-base" style="color: var(--muted);">
+                  Tăng giảm kích thước chữ theo nhu cầu đọc cá nhân
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <div class="flex items-start gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                   style="background: var(--accent);">
+                💾
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-2" style="color: var(--fg);">Lưu cài đặt</h4>
+                <p class="text-sm md:text-base" style="color: var(--muted);">
+                  Tự động lưu các tùy chọn hiển thị cho lần truy cập tiếp theo
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
   </main>
 
   <footer class="border-t border-opacity-10 py-6 md:py-8 text-center" 
           style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      <small>  <span id="year"></span> <a href="https://nmdan.com" class="no-underline hover:underline" style="color: var(--accent);">Minh Dân</a></small>
+      <small>© <span id="year"></span> <a href="https://nmdan.com" class="no-underline hover:underline" style="color: var(--accent);">Minh Dân</a></small>
     </div>
   </footer>
 
@@ -181,6 +351,20 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   </script>
 </body>
 
