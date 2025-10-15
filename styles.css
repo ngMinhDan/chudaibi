@@ -1,0 +1,131 @@
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6b7280; /* gray-500 */
+  --accent: #2563eb; /* blue-600 */
+  --card: #f8fafc; /* slate-50 */
+  --font-scale: 1; /* persisted via JS */
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0f14;
+  --fg: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --card: #0f172a;
+}
+
+/* CSS Reset (minimal) */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+html {
+  font-size: calc(18px * var(--font-scale));
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.wrap {
+  max-width: 70ch; /* ideal reading width */
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 10%, transparent);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.site-title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.toolbar {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.toolbar button,
+.toolbar .download {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--fg) 20%, transparent);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  color: var(--fg);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toolbar button:hover,
+.toolbar .download:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--fg));
+}
+
+.content {
+  padding: 1rem 0 2.5rem;
+}
+
+.text h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.text p {
+  margin: 0 0 1rem 0;
+  text-wrap: pretty;
+}
+
+/* Card-like background on larger screens */
+@media (min-width: 768px) {
+  .content .text {
+    background: var(--card);
+    border: 1px solid color-mix(in srgb, var(--fg) 8%, transparent);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+.site-footer {
+  border-top: 1px solid color-mix(in srgb, var(--fg) 10%, transparent);
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+}
+
+/* Improve tap targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .toolbar button,
+  .toolbar .download {
+    padding: 0.55rem 0.75rem;
+  }
+}
+
+/* Print styling */
+@media print {
+  .site-header, .toolbar, .site-footer { display: none; }
+  .wrap { max-width: none; }
+  body { color: #000; background: #fff; }
+}

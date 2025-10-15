@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chú Đại Bi</title>
+  <meta name="description" content="Bản văn Chú Đại Bi với bố cục dễ đọc trên điện thoại và máy tính." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <h1 class="site-title">Chú Đại Bi</h1>
+      <nav class="toolbar" aria-label="Công cụ hiển thị">
+        <button id="decrease-font" aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">A−</button>
+        <button id="increase-font" aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">A+</button>
+        <button id="toggle-theme" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">🌗</button>
+        <a class="download" href="./chudaibi.png" download>⬇️ Tải văn bản</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content" role="main">
+    <article class="text">
+
+
+
+      <h1>Chú Đại Bi</h1>
+      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+
+
+
+      <p>Thiên thủ thiên nhãn, vô ngại Đại-bi tâm đà-la-ni. </p>
+
+      <p>Nam mô hắc ra đát na đa ra dạ da.</p>
+      <p>Nam mô a rị da bà lô yết đế, thước bát ra da, bồ đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
+        Án tát bàn ra phạt duệ, số đát na đát tỏa.</p>
+      <p>Nam mô tất kiết lật đỏa, y mông a rị da, bà lô kiết đế, thất Phật ra lăng đà bà.</p>
+      <p>Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế, tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
+        già, ma phạt đạt đậu, đát điệt tha.</p>
+      <p>Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
+        đà dựng, </p>
+      <p>cu lô cu lô, kiết mông độ lô độ lô, phạt xà da đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
+        da, dá ra dá ra.</p>
+      <p>Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
+        da, hô lô hô lô, </p>
+      <p>ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
+        rị dạ na ra cẩn trì địa rị sắc ni na, ba dạ ma na, ta bà ha.</p>
+      <p>Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
+        ha.
+      <p>Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha.</p>
+      <p>Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha.
+      <p>Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
+      <p>Nam mô hắc ra đát na, đa ra dạ da.</p>
+      <p>Nam mô a rị da, bà lô yết đế, thước bàng ra dạ, ta bà ha.</p>
+
+      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+
+
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <small>© <span id="year"></span> <a href="https://nmdan.com"></a> Minh Dân </small>
+    </div>
+  </footer>
+
+  <script>
+    // Theme: follow saved preference or OS preference
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.dataset.theme = saved;
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+
+    const root = document.documentElement;
+    const btnInc = document.getElementById('increase-font');
+    const btnDec = document.getElementById('decrease-font');
+    const btnTheme = document.getElementById('toggle-theme');
+
+    function setSize(mult) {
+      const base = parseFloat(getComputedStyle(root).getPropertyValue('--font-scale')) || 1;
+      const next = Math.min(1.5, Math.max(0.8, +(base * mult).toFixed(2)));
+      root.style.setProperty('--font-scale', next);
+      localStorage.setItem('font-scale', String(next));
+    }
+
+    btnInc.addEventListener('click', () => setSize(1.1));
+    btnDec.addEventListener('click', () => setSize(1 / 1.1));
+
+    btnTheme.addEventListener('click', () => {
+      const cur = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = cur;
+      localStorage.setItem('theme', cur);
+    });
+
+    // Load saved font scale
+    (function initFont() {
+      const saved = parseFloat(localStorage.getItem('font-scale'));
+      if (!isNaN(saved)) root.style.setProperty('--font-scale', saved);
+    })();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // add owner here domain : owner nmdan.com
+    document.getElementById('owner').textContent = 'Chú Đại Bi';
+  </script>
+</body>
+
+</html>
