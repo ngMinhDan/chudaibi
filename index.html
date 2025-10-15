@@ -4,71 +4,144 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chú Đại Bi</title>
+  <title>A Di Đà Phật</title>
   <meta name="description" content="Bản văn Chú Đại Bi với bố cục dễ đọc trên điện thoại và máy tính." />
-  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Noto Sans', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+          },
+          colors: {
+            'custom-bg': 'var(--bg)',
+            'custom-fg': 'var(--fg)',
+            'custom-muted': 'var(--muted)',
+            'custom-accent': 'var(--accent)',
+            'custom-card': 'var(--card)',
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --card: #f8fafc;
+      --font-scale: 1;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0b0f14;
+      --fg: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --card: #0f172a;
+    }
+
+    html {
+      font-size: calc(16px * var(--font-scale));
+    }
+
+    @media (min-width: 480px) {
+      html { font-size: calc(17px * var(--font-scale)); }
+    }
+
+    @media (min-width: 768px) {
+      html { font-size: calc(18px * var(--font-scale)); }
+    }
+
+    @media (min-width: 1024px) {
+      html { font-size: calc(19px * var(--font-scale)); }
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+    }
+  </style>
 </head>
 
-<body>
-  <header class="site-header" role="banner">
-    <div class="wrap">
-      <h1 class="site-title">Chú Đại Bi</h1>
-      <nav class="toolbar" aria-label="Công cụ hiển thị">
-        <button id="decrease-font" aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">A−</button>
-        <button id="increase-font" aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">A+</button>
-        <button id="toggle-theme" aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">🌗</button>
-        <a class="download" href="./chudaibi.png" download>⬇️ Tải văn bản</a>
-      </nav>
+<body class="font-sans leading-relaxed md:leading-loose antialiased">
+  <header class="sticky top-0 z-10 backdrop-blur-md border-b border-opacity-10" 
+          style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
+    <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3 md:py-4 min-h-[60px] md:min-h-[70px]">
+        <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">A Di Đà Phật</h1>
+        <nav class="flex gap-1 sm:gap-2 md:gap-2 items-center flex-wrap" aria-label="Công cụ hiển thị">
+          <button id="decrease-font" 
+                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+                  aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">A−</button>
+          <button id="increase-font" 
+                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+                  aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">A+</button>
+          <button id="toggle-theme" 
+                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+                  aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">🌗</button>
+          <a class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors no-underline"
+             style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+             href="./chudaibi.png" download>⬇️ Tải văn bản</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="content" role="main">
-    <article class="text">
+  <main class="py-4 md:py-8 lg:py-14" role="main">
+    <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+      <article class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10" 
+               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+        
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-8 m-0" 
+            style="color: var(--accent);">Chú Đại Bi</h1>
+        
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
 
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Thiên thủ thiên nhãn, vô ngại Đại-bi tâm đà-la-ni.</p>
 
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na đa ra dạ da.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da bà lô yết đế, thước bát ra da, bồ đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
+          Án tát bàn ra phạt duệ, số đát na đát tỏa.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô tất kiết lật đỏa, y mông a rị da, bà lô kiết đế, thất Phật ra lăng đà bà.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế, tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
+          già, ma phạt đạt đậu, đát điệt tha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
+          đà dựng,</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">cu lô cu lô, kiết mông độ lô độ lô, phạt xà da đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
+          da, dá ra dá ra.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
+          da, hô lô hô lô,</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
+          rị dạ na ra cẩn trì địa rị sắc ni na, ba dạ ma na, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
+          ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na, đa ra dạ da.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da, bà lô yết đế, thước bàng ra dạ, ta bà ha.</p>
 
-      <h1>Chú Đại Bi</h1>
-      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
-      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
-      <p>Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
 
-
-
-      <p>Thiên thủ thiên nhãn, vô ngại Đại-bi tâm đà-la-ni. </p>
-
-      <p>Nam mô hắc ra đát na đa ra dạ da.</p>
-      <p>Nam mô a rị da bà lô yết đế, thước bát ra da, bồ đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
-        Án tát bàn ra phạt duệ, số đát na đát tỏa.</p>
-      <p>Nam mô tất kiết lật đỏa, y mông a rị da, bà lô kiết đế, thất Phật ra lăng đà bà.</p>
-      <p>Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế, tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
-        già, ma phạt đạt đậu, đát điệt tha.</p>
-      <p>Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
-        đà dựng, </p>
-      <p>cu lô cu lô, kiết mông độ lô độ lô, phạt xà da đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
-        da, dá ra dá ra.</p>
-      <p>Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
-        da, hô lô hô lô, </p>
-      <p>ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
-        rị dạ na ra cẩn trì địa rị sắc ni na, ba dạ ma na, ta bà ha.</p>
-      <p>Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
-        ha.
-      <p>Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha.</p>
-      <p>Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha.
-      <p>Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
-      <p>Nam mô hắc ra đát na, đa ra dạ da.</p>
-      <p>Nam mô a rị da, bà lô yết đế, thước bàng ra dạ, ta bà ha.</p>
-
-      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-      <p>Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-
-
-    </article>
+      </article>
+    </div>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="wrap">
-      <small>© <span id="year"></span> <a href="https://nmdan.com"></a> Minh Dân </small>
+  <footer class="border-t border-opacity-10 py-6 md:py-8 text-center" 
+          style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
+    <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+      <small>  <span id="year"></span> <a href="https://nmdan.com" class="no-underline hover:underline" style="color: var(--accent);">Minh Dân</a></small>
     </div>
   </footer>
 
@@ -111,8 +184,6 @@
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // add owner here domain : owner nmdan.com
-    document.getElementById('owner').textContent = 'Chú Đại Bi';
   </script>
 </body>
 
