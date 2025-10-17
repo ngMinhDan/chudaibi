@@ -49,15 +49,21 @@
     }
 
     @media (min-width: 480px) {
-      html { font-size: calc(17px * var(--font-scale)); }
+      html {
+        font-size: calc(17px * var(--font-scale));
+      }
     }
 
     @media (min-width: 768px) {
-      html { font-size: calc(18px * var(--font-scale)); }
+      html {
+        font-size: calc(18px * var(--font-scale));
+      }
     }
 
     @media (min-width: 1024px) {
-      html { font-size: calc(19px * var(--font-scale)); }
+      html {
+        font-size: calc(19px * var(--font-scale));
+      }
     }
 
     body {
@@ -83,33 +89,33 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCH3GGZ6E0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-GCH3GGZ6E0');
 </script>
 
 <body class="font-sans leading-relaxed md:leading-loose antialiased">
-  <header class="sticky top-0 z-10 backdrop-blur-md border-b border-opacity-10" 
-          style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
+  <header class="sticky top-0 z-10 backdrop-blur-md border-b border-opacity-10"
+    style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3 md:py-4 min-h-[60px] md:min-h-[70px]">
         <a href="index.html" class="no-underline">
-  <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">A Di Đà Phật</h1>
-</a>
+          <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">A Di Đà Phật</h1>
+        </a>
         <nav class="flex gap-1 sm:gap-2 md:gap-2 items-center flex-wrap" aria-label="Công cụ hiển thị">
-          <button id="decrease-font" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">Giảm cỡ chữ</button>
-          <button id="increase-font" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">Tăng cỡ chữ</button>
-          <button id="toggle-theme" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">Bật/Tắt đèn</button>
+          <button id="decrease-font"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">Giảm cỡ chữ</button>
+          <button id="increase-font"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">Tăng cỡ chữ</button>
+          <button id="toggle-theme"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">Bật/Tắt đèn</button>
         </nav>
       </div>
     </div>
@@ -117,11 +123,11 @@
 
   <main class="py-4 md:py-8 lg:py-14" role="main">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      
+
       <!-- Welcome Section -->
       <section class="mb-8 md:mb-12">
-        <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10 text-center" 
-             style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+        <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10 text-center"
+          style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
           <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style="color: var(--accent);">
             Nam Mô A Di Đà Phật
           </h2>
@@ -129,14 +135,14 @@
             Chia sẻ các bài kinh, chú và công cụ hỗ trợ tu tập hàng ngày - vĩnh viễn miễn phí, không quảng cáo
           </p>
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-            <a href="chudaibi.html" 
-               class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white transition-colors min-h-[44px] w-full sm:w-auto"
-               style="background: var(--accent);">
+            <a href="chudaibi.html"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white transition-colors min-h-[44px] w-full sm:w-auto"
+              style="background: var(--accent);">
               Đọc Chú Đại Bi
             </a>
-            <a href="#sutras" 
-               class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium border transition-colors min-h-[44px] w-full sm:w-auto"
-               style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);">
+            <a href="#sutras"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium border transition-colors min-h-[44px] w-full sm:w-auto"
+              style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);">
               Xem thêm kinh sách
             </a>
           </div>
@@ -149,87 +155,81 @@
           Các bài kinh và chú
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          
+
           <!-- Chu Dai Bi Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Chú Đại Bi</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
               Bản văn đầy đủ của Chú Đại Bi với bố cục dễ đọc trên mọi thiết bị
             </p>
-            <a href="chudaibi.html" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--accent);">
+            <a href="chudaibi.html" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--accent);">
               Đọc ngay →
             </a>
           </div>
 
           <!-- Kinh Phat Dan Sanh Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Giải thích chú Đại Bi</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
               Bản văn đầy đủ của Giải thích chú Đại Bi với bố cục dễ đọc trên mọi thiết bị
             </p>
-            <a href="giaithichchudaibi.html" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--accent);">
+            <a href="giaithichchudaibi.html" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--accent);">
               Đọc ngay →
             </a>
           </div>
 
           <!-- Kinh Tam Bao Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
-            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Tam Bảo</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
-              Kinh về Phật, Pháp, Tăng - ba báu vật thiêng liêng của Phật giáo
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+            <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Bát Nhã Tâm Kinh</h4>
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
+              Bản văn đầy đủ của Bát Nhã Tâm Kinh với bố cục dễ đọc trên mọi thiết bị
             </p>
-            <a href="#" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--muted);">
-              Sắp ra mắt →
+            <a href="batnhatamkinh.html" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--accent);">
+              Đọc ngay →
             </a>
           </div>
 
           <!-- Chu Luc Tu Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Chú Lục Tự</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
               Om Mani Padme Hum - chú ngôn sáu chữ của Đức Quan Thế Âm
             </p>
-            <a href="#" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--muted);">
+            <a href="#" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--muted);">
               Sắp ra mắt →
             </a>
           </div>
 
           <!-- Kinh Tam Quy Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Tam Quy</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
               Lời nguyện quy y Tam Bảo, bước đầu vào cửa Phật
             </p>
-            <a href="#" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--muted);">
+            <a href="#" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--muted);">
               Sắp ra mắt →
             </a>
           </div>
 
           <!-- Kinh Cau Sieu Card -->
-          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="card-hover md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6 flex flex-col h-full"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <h4 class="text-lg font-semibold mb-3" style="color: var(--accent);">Kinh Cầu Siêu</h4>
-            <p class="mb-4 text-sm md:text-base" style="color: var(--muted);">
+            <p class="mb-4 text-sm md:text-base flex-grow" style="color: var(--muted);">
               Các bài kinh dành cho việc cầu siêu, hồi hướng công đức
             </p>
-            <a href="#" 
-               class="inline-flex items-center text-sm font-medium transition-colors"
-               style="color: var(--muted);">
+            <a href="#" class="inline-flex items-center text-sm font-medium transition-colors mt-auto"
+              style="color: var(--muted);">
               Sắp ra mắt →
             </a>
           </div>
@@ -243,12 +243,13 @@
           Tính năng hỗ trợ
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          
-          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
-                   style="background: var(--accent);">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                style="background: var(--accent);">
                 📱
               </div>
               <div>
@@ -260,11 +261,12 @@
             </div>
           </div>
 
-          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
-                   style="background: var(--accent);">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                style="background: var(--accent);">
                 🌙
               </div>
               <div>
@@ -276,11 +278,12 @@
             </div>
           </div>
 
-          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
-                   style="background: var(--accent);">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                style="background: var(--accent);">
                 🔤
               </div>
               <div>
@@ -292,11 +295,12 @@
             </div>
           </div>
 
-          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          <div class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm p-4 md:p-6"
+            style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
             <div class="flex items-start gap-3">
-              <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
-                   style="background: var(--accent);">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                style="background: var(--accent);">
                 💾
               </div>
               <div>
@@ -314,10 +318,11 @@
     </div>
   </main>
 
-  <footer class="border-t border-opacity-10 py-6 md:py-8 text-center" 
-          style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
+  <footer class="border-t border-opacity-10 py-6 md:py-8 text-center"
+    style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      <small>© <span id="year"></span> <a href="https://nmdan.com" class="no-underline hover:underline" style="color: var(--accent);">Minh Dân</a></small>
+      <small> 2023 <a href="https://nmdan.com" class="no-underline hover:underline"
+          style="color: var(--accent);">Minh Dân</a></small>
     </div>
   </footer>
 
