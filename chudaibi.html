@@ -50,15 +50,21 @@
     }
 
     @media (min-width: 480px) {
-      html { font-size: calc(17px * var(--font-scale)); }
+      html {
+        font-size: calc(17px * var(--font-scale));
+      }
     }
 
     @media (min-width: 768px) {
-      html { font-size: calc(18px * var(--font-scale)); }
+      html {
+        font-size: calc(18px * var(--font-scale));
+      }
     }
 
     @media (min-width: 1024px) {
-      html { font-size: calc(19px * var(--font-scale)); }
+      html {
+        font-size: calc(19px * var(--font-scale));
+      }
     }
 
     body {
@@ -71,33 +77,33 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCH3GGZ6E0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-GCH3GGZ6E0');
 </script>
 
 <body class="font-sans leading-relaxed md:leading-loose antialiased">
-  <header class="sticky top-0 z-10 backdrop-blur-md border-b border-opacity-10" 
-          style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
+  <header class="sticky top-0 z-10 backdrop-blur-md border-b border-opacity-10"
+    style="background: color-mix(in srgb, var(--bg) 92%, transparent); border-color: color-mix(in srgb, var(--fg) 10%, transparent);">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3 md:py-4 min-h-[60px] md:min-h-[70px]">
         <a href="index.html" class="no-underline">
-  <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">🙏 A Di Đà Phật</h1>
-</a>
+          <h1 class="text-lg md:text-xl font-semibold m-0" style="color: var(--fg);">🙏 A Di Đà Phật</h1>
+        </a>
         <nav class="flex gap-1 sm:gap-2 md:gap-2 items-center flex-wrap" aria-label="Công cụ hiển thị">
-          <button id="decrease-font" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">Giảm cỡ chữ</button>
-          <button id="increase-font" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">Tăng cỡ chữ</button>
-          <button id="toggle-theme" 
-                  class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
-                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
-                  aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">Bật/Tắt đèn</button>
+          <button id="decrease-font"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">Giảm cỡ chữ</button>
+          <button id="increase-font"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">Tăng cỡ chữ</button>
+          <button id="toggle-theme"
+            class="appearance-none border rounded-lg px-3 py-2 md:px-2 md:py-1 font-inherit cursor-pointer text-sm md:text-base min-h-[44px] md:min-h-auto flex items-center justify-center hover:border-opacity-60 transition-colors"
+            style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--fg);"
+            aria-label="Chuyển chế độ sáng/tối" title="Chuyển chế độ">Bật/Tắt đèn</button>
         </nav>
       </div>
     </div>
@@ -105,15 +111,15 @@
 
   <main class="py-4 md:py-8 lg:py-14" role="main">
     <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-      
+
       <!-- Compact Stats & Audio Player -->
       <div class="mb-6 md:mb-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-        
+
         <!-- Statistics Component with Border -->
         <div class="flex-1 md:rounded-lg border md:border-opacity-8 md:shadow-sm md:p-4 p-3"
-             style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+          style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
           <p class="text-xs md:text-sm font-semibold mb-3" style="color: var(--muted);">📊 Thống kê</p>
-          
+
           <div class="grid grid-cols-2 gap-3">
             <!-- Today Counter -->
             <div class="flex flex-col items-center gap-2">
@@ -121,13 +127,13 @@
               <p class="text-2xl md:text-3xl font-bold" id="today-count" style="color: var(--fg);">0</p>
               <div class="flex gap-1">
                 <button id="decrease-today-btn"
-                        class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
-                        style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: transparent; color: var(--fg);">
+                  class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
+                  style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: transparent; color: var(--fg);">
                   −
                 </button>
                 <button id="increase-today-btn"
-                        class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
-                        style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
+                  class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
+                  style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
                   +
                 </button>
               </div>
@@ -138,8 +144,8 @@
               <p class="text-xs" style="color: var(--muted);">Toàn bộ</p>
               <p class="text-2xl md:text-3xl font-bold" id="total-count" style="color: var(--fg);">0</p>
               <button id="reset-count-btn"
-                      class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
-                      style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: transparent; color: var(--muted);">
+                class="appearance-none border rounded px-2 py-1 font-inherit cursor-pointer text-xs font-semibold transition-colors hover:opacity-70"
+                style="border-color: color-mix(in srgb, var(--fg) 20%, transparent); background: transparent; color: var(--muted);">
                 🔄
               </button>
             </div>
@@ -147,11 +153,12 @@
         </div>
 
         <!-- Audio Player Component with Border -->
-        <div class="flex-1 md:rounded-lg border md:border-opacity-8 md:shadow-sm md:p-4 p-3 flex flex-col items-center justify-center"
-             style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+        <div
+          class="flex-1 md:rounded-lg border md:border-opacity-8 md:shadow-sm md:p-4 p-3 flex flex-col items-center justify-center"
+          style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
           <button id="play-audio-btn"
-                  class="appearance-none border rounded-lg px-4 py-2 font-inherit cursor-pointer text-sm md:text-base font-semibold transition-colors hover:opacity-80 w-full"
-                  style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
+            class="appearance-none border rounded-lg px-4 py-2 font-inherit cursor-pointer text-sm md:text-base font-semibold transition-colors hover:opacity-80 w-full"
+            style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
             🔊 Phát âm thanh
           </button>
           <p class="text-xs mt-2" style="color: var(--muted);">Sắp có mặt</p>
@@ -159,64 +166,79 @@
       </div>
 
       <!-- Article -->
-      <article class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10" 
-               style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
-        
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-8 m-0" 
-            style="color: var(--accent);">Chú Đại Bi</h1>
-        
+      <article class="md:rounded-xl md:border md:border-opacity-8 md:shadow-sm md:p-6 lg:p-10"
+        style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-8 m-0"
+          style="color: var(--accent);">Chú Đại Bi</h1>
+
         <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
         <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
         <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam-mô Đại-bi Hội-Thượng Phật Bồ-tát</p>
 
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Thiên thủ thiên nhãn, vô ngại Đại-bi tâm đà-la-ni.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Thiên thủ thiên nhãn, vô ngại Đại-bi tâm
+          đà-la-ni.</p>
 
         <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na đa ra dạ da.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da bà lô yết đế, thước bát ra da, bồ đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da bà lô yết đế, thước bát ra da, bồ
+          đề tát đỏa bà da, ma ha tát đỏa bà da, ma ha ca lô ni ca da.
           Án tát bàn ra phạt duệ, số đát na đát tỏa.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô tất kiết lật đỏa, y mông a rị da, bà lô kiết đế, thất Phật ra lăng đà bà.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế, tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô tất kiết lật đỏa, y mông a rị da, bà lô
+          kiết đế, thất Phật ra lăng đà bà.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô na ra cẩn trì hê rị, ma ha bàn đa sa mế,
+          tát bà a tha đậu du bằng, a thệ dựng, tát bà tát đa, na ma bà
           già, ma phạt đạt đậu, đát điệt tha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, a bà lô hê, lô ca đế, ca ra đế, di hê rị, ma
+          ha bồ đề tát đỏa, tát bà tát bà, ma ra ma ra, ma hê ma hê, rị
           đà dựng,</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">cu lô cu lô, kiết mông độ lô độ lô, phạt xà da đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">cu lô cu lô, kiết mông độ lô độ lô, phạt xà da
+          đế, ma ha phạt xà da đế, đà ra đà ra, địa rị ni, thất Phật ra
           da, dá ra dá ra.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Mạ mạ phạt ma ra, mục đế lệ, y hê di hê, thất na
+          thất na, a ra sâm Phật ra xá lợi, phạt sa phạt sâm, Phật ra xá
           da, hô lô hô lô,</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">ma ra hô lô hô lô hê rị, ta ra ta ra, tất rị tất
+          rị, tô rô tô rô, bồ đề dạ, bồ đề dạ, bồ đà dạ, bồ đà dạ, di đế
           rị dạ na ra cẩn trì địa rị sắc ni na, ba dạ ma na, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha. Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Tất đà dạ, ta bà ha. Ma ha tất đà dạ, ta bà ha.
+          Tất đà du nghệ, thất bàn ra dạ, ta bà ha. Na ra cẩn trì, ta bà
           ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a tất đà dạ, ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ma ra na ra, ta bà ha. Tất ra tăng a mục khê da,
+          ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ta bà ma ha, a tất đà dạ, ta bà ha. Giả kiết ra a
+          tất đà dạ, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Ba đà ma yết tất đà dạ, ta bà ha. Na ra cẩn trì
+          bàn đà ra dạ, ta bà ha. Ma bà lị thắng yết ra dạ, ta bà ha.</p>
         <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô hắc ra đát na, đa ra dạ da.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da, bà lô yết đế, thước bàng ra dạ, ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Nam mô a rị da, bà lô yết đế, thước bàng ra dạ,
+          ta bà ha.</p>
 
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
-        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.</p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.
+        </p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.
+        </p>
+        <p class="mb-2 md:mb-3 text-left md:text-justify py-0 md:py-1">Án, tất điện đô, mạn đa ra, bạt đà dạ ta bà ha.
+        </p>
 
       </article>
     </div>
   </main>
 
   <footer class="border-t border-opacity-10 py-6 md:py-8 text-center"
-  style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
-  <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-    <div class="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
-      <small> 2025 <a href="https://nmdan.com" class="no-underline hover:underline"
-          style="color: var(--accent);">Minh Dân</a></small>
-      <small>
-        <a href="https://forms.gle/CKNad1WWEJTCSJik7" target="_blank" rel="noopener noreferrer" 
-           class="no-underline hover:underline inline-flex items-center gap-1"
-           style="color: var(--accent);">
-          📝 Góp ý trang web
-        </a>
-      </small>
+    style="border-color: color-mix(in srgb, var(--fg) 10%, transparent); color: var(--muted);">
+    <div class="w-full max-w-none md:max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
+        <small> 2025 <a href="https://nmdan.com" class="no-underline hover:underline" style="color: var(--accent);">Minh
+            Dân</a></small>
+        <small>
+          <a href="https://forms.gle/CKNad1WWEJTCSJik7" target="_blank" rel="noopener noreferrer"
+            class="no-underline hover:underline inline-flex items-center gap-1" style="color: var(--accent);">
+            📝 Góp ý trang web
+          </a>
+        </small>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     // Theme: follow saved preference or OS preference
@@ -265,53 +287,64 @@
       const resetCountBtn = document.getElementById('reset-count-btn');
       const playAudioBtn = document.getElementById('play-audio-btn');
 
+      // Get unique page identifier from document title (works for all pages)
+      const pageId = document.title
+        .replace(/[🙏🔊]/g, '') // Remove emojis
+        .trim()
+        .replace(/\s+/g, '-')
+        .toLowerCase()
+        .substring(0, 50); // Limit length
+        
       function getTodayKey() {
         const today = new Date().toISOString().split('T')[0];
-        return `counter-today-${today}`;
+        return `counter-${pageId}-today-${today}`;
+      }
+
+      function getTotalKey() {
+        return `counter-${pageId}-total`;
       }
 
       function loadCounts() {
         const todayCount = parseInt(localStorage.getItem(getTodayKey())) || 0;
-        const totalCount = parseInt(localStorage.getItem('counter-total')) || 0;
+        const totalCount = parseInt(localStorage.getItem(getTotalKey())) || 0;
         todayCountEl.textContent = todayCount;
         totalCountEl.textContent = totalCount;
       }
 
       function incrementToday() {
         const todayKey = getTodayKey();
+        const totalKey = getTotalKey();
         const todayCount = parseInt(localStorage.getItem(todayKey)) || 0;
-        const totalCount = parseInt(localStorage.getItem('counter-total')) || 0;
+        const totalCount = parseInt(localStorage.getItem(totalKey)) || 0;
 
         localStorage.setItem(todayKey, todayCount + 1);
-        localStorage.setItem('counter-total', totalCount + 1);
+        localStorage.setItem(totalKey, totalCount + 1);
         loadCounts();
       }
 
       function decrementToday() {
         const todayKey = getTodayKey();
+        const totalKey = getTotalKey();
         const todayCount = parseInt(localStorage.getItem(todayKey)) || 0;
-        const totalCount = parseInt(localStorage.getItem('counter-total')) || 0;
-        
+        const totalCount = parseInt(localStorage.getItem(totalKey)) || 0;
+
         if (todayCount > 0) {
           localStorage.setItem(todayKey, todayCount - 1);
-          localStorage.setItem('counter-total', Math.max(0, totalCount - 1));
+          localStorage.setItem(totalKey, Math.max(0, totalCount - 1));
           loadCounts();
         }
       }
 
       function resetAllData() {
-        if (confirm('Bạn có chắc muốn xóa tất cả dữ liệu đếm và bắt đầu lại từ đầu ?')) {
+        if (confirm('Bạn có chắc muốn xóa tất cả dữ liệu đếm?')) {
           localStorage.removeItem(getTodayKey());
-          localStorage.removeItem('counter-total');
+          localStorage.removeItem(getTotalKey());
           loadCounts();
         }
       }
 
       function playAudio() {
         alert('🎵 Tệp âm thanh sẽ sớm có mặt');
-        // TODO: Replace with actual audio playback
-        // const audio = new Audio('path/to/chu-dai-bi.mp3');
-        // audio.play();
       }
 
       increaseTodayBtn.addEventListener('click', incrementToday);
@@ -321,6 +354,7 @@
 
       loadCounts();
     })();
+
   </script>
 </body>
 
