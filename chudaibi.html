@@ -153,15 +153,16 @@
         </div>
 
         <!-- Audio Player Component with Border -->
-        <div
-          class="flex-1 md:rounded-lg border md:border-opacity-8 md:shadow-sm md:p-4 p-3 flex flex-col items-center justify-center"
-          style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
+        <div class="flex-1 md:rounded-lg border md:border-opacity-8 md:shadow-sm md:p-4 p-3 flex flex-col items-center justify-center gap-2"
+             style="background: var(--card); border-color: color-mix(in srgb, var(--fg) 8%, transparent);">
           <button id="play-audio-btn"
-            class="appearance-none border rounded-lg px-4 py-2 font-inherit cursor-pointer text-sm md:text-base font-semibold transition-colors hover:opacity-80 w-full"
-            style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
+                  class="appearance-none border rounded-lg px-4 py-2 font-inherit cursor-pointer text-sm md:text-base font-semibold transition-colors hover:opacity-80 w-full"
+                  style="border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent);">
             🔊 Phát âm thanh
           </button>
-          <p class="text-xs mt-2" style="color: var(--muted);">Sắp có mặt</p>
+          <p id="audio-emotion" class="text-sm transition-opacity" style="color: var(--accent); opacity: 0;">
+            🎵 Đang phát...
+          </p>
         </div>
       </div>
 
@@ -343,9 +344,38 @@
         }
       }
 
+      // Create audio element once
+      let audio = new Audio('https://res.cloudinary.com/dtmebo99b/video/upload/v1763284523/%C4%90a%CC%A3i_Bi_Tha%CC%82%CC%80n_Chu%CC%81_Tie%CC%82%CC%81ng_Pha%CC%A3n_hgil4d.mp3');
+      audio.id = 'chu-dai-bi-audio';
+
       function playAudio() {
-        alert('🎵 Tệp âm thanh sẽ sớm có mặt');
+        const emotionEl = document.getElementById('audio-emotion');
+
+        if (audio.paused) {
+          audio.play().catch(err => {
+            alert('❌ Không thể phát âm thanh: ' + err.message);
+          });
+          playAudioBtn.textContent = '⏸️ Tạm dừng';
+          emotionEl.textContent = '🎵 Đang phát...';
+          emotionEl.style.opacity = '1';
+        } else {
+          audio.pause();
+          playAudioBtn.textContent = '🔊 Nghe tiếp Chú Đại Bi';
+          emotionEl.textContent = 'Đang tạm dừng';
+          emotionEl.style.opacity = '0.6';
+        }
       }
+
+      // Handle audio ended event
+      audio.addEventListener('ended', () => {
+        playAudioBtn.textContent = '🔊 Nghe Chú Đại Bi';
+        const emotionEl = document.getElementById('audio-emotion');
+        emotionEl.textContent = '✨ Hoàn thành';
+        emotionEl.style.opacity = '0.5';
+        setTimeout(() => {
+          emotionEl.style.opacity = '0';
+        }, 2000);
+      });
 
       increaseTodayBtn.addEventListener('click', incrementToday);
       decreaseTodayBtn.addEventListener('click', decrementToday);
